@@ -32,7 +32,7 @@ void draw() {
                                             // house
 
   fill(0);
-  text( "My name is Mud", 10,height-20 );                                          
+  text( "My name is Rocky", 10,height-20 );                                          
                                             
   //// ACTION:  move (x,y) coordinates.
   x=  x + dx;
