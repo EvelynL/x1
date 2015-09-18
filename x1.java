@@ -1,5 +1,6 @@
 
 
+
 //// GLOBALS:  coordinates, speed, etc.
 float x, y;       // Position of creature.
 float dx, dy;     // Speed.
@@ -18,7 +19,7 @@ void setup() {
 //// NEXT FRAME:  scene, action, show.
 void draw() {
   //// SCENE:  sky, sun, tree, house, etc.
-  background( 100,150,200 );                // sky
+  background( 0,191,255 );                // sky
   fill( 255,255,0 );
   ellipse( width*3/4, height/8, 40,40 );    // sun
   // Grass
@@ -70,6 +71,5 @@ void keyPressed() {
     exit();                           // press 'q' key to QUIT.
   }
 }
-
 
 
