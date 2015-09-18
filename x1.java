@@ -1,5 +1,4 @@
-//////// What am I trying to do???
-//////// What is my name?  (CST 112; today's date?)
+
 
 //// GLOBALS:  coordinates, speed, etc.
 float x, y;       // Position of creature.
@@ -26,9 +25,12 @@ void draw() {
   fill( 100,200,100 );
   rect( 0,horizon, width,height*3/4 );      // grass.
   
-  /* INSERT YOUR CODE HERE! */
-  triangle( 150,horizon, 120,horizon-50, 180,horizon-50  );  // tree
-  text( "This is NOT a good tree; please fix it!", 150,horizon );
+  /* tree */
+  fill(139,69,19);//color of tree bark
+  rect(horizon-10,horizon-30,20,30);//bark of tree
+  fill(34,139,34);//color of leaves
+  ellipse( horizon,horizon-50, 100,horizon-50  );  // leaves
+  
                                             // house
 
   fill(0);
@@ -38,11 +40,18 @@ void draw() {
   x=  x + dx;
   y=  y + dy;
   
-  //// SHOW:  display the creature at (x,y)
 
-  /* INSERT YOUR CODE HERE! */
-  fill(255,0,0); rect( x,y, 30,50 );        /* REPLACE THIS WITH YOUR OWN CODE! */
-  text( "Fred", x,y );
+
+  /* Creature */
+  fill(245,222,179); //color of face
+  ellipse(x, y, 80, 80);//face
+  fill(176,224,230);//color of eyes
+  ellipse(x,y,10,10);//eye
+  ellipse(x+40,y,10,10);//eye
+  fill(220,20,60);//color of mouth
+  rect(x+10,y+10,30,10); //mouth    
+ fill(75,0,130);  //color of name
+  text( "Rocky", x-10,y-40 );//creatures name
 
 }
 
@@ -61,5 +70,6 @@ void keyPressed() {
     exit();                           // press 'q' key to QUIT.
   }
 }
+
 
 
