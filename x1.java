@@ -19,13 +19,26 @@ void setup() {
 //// NEXT FRAME:  scene, action, show.
 void draw() {
   //// SCENE:  sky, sun, tree, house, etc.
+  
   background( 0,191,255 );                // sky
   fill( 255,255,0 );
+  
   ellipse( width*3/4, height/8, 40,40 );    // sun
+  
   // Grass
   fill( 100,200,100 );
   rect( 0,horizon, width,height*3/4 );      // grass.
   
+  //house
+  fill(102,0,0);//house color
+  rect(horizon+255,horizon+50,50,50);//house
+  fill(102,51,0);//roof and door color
+  triangle(horizon+250,horizon+50,horizon+310,horizon+50,400,150);//roof
+    rect(horizon+270,horizon+80,20,20);//door
+    fill(255,255,204);// window color
+    rect(horizon+260,horizon+60,10,10);//window
+    rect(horizon+290,horizon+60,10,10);//window
+    
   /* tree */
   fill(139,69,19);//color of tree bark
   rect(horizon-10,horizon-30,20,30);//bark of tree
@@ -33,7 +46,7 @@ void draw() {
   ellipse( horizon,horizon-50, 100,horizon-50  );  // leaves
   
                                             // house
-
+//introducing creature
   fill(0);
   text( "My name is Rocky", 10,height-20 );                                          
                                             
@@ -71,5 +84,7 @@ void keyPressed() {
     exit();                           // press 'q' key to QUIT.
   }
 }
+
+
 
 
